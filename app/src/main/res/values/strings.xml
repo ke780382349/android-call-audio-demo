@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">通话 PCM 采集与注入</string>
+    <string name="title_downlink_capture">通话 PCM 分路采集与双向注入</string>
+    <string name="format_description">格式：48 kHz · 单声道 · PCM16 little-endian · 原始 .pcm 文件</string>
+
+    <string name="permission_checking">正在检查权限……</string>
+    <string name="permission_state">RECORD_AUDIO：%1$s\nCAPTURE_AUDIO_OUTPUT：%2$s\nCONTROL_INCALL_EXPERIENCE：%3$s\nMODIFY_PHONE_STATE：%4$s\nCALL_AUDIO_INTERCEPTION：%5$s</string>
+    <string name="status_record_audio_denied">RECORD_AUDIO 被拒绝，无法开始自动采集。</string>
+
+    <string name="automatic_capture_title">接通后自动采集</string>
+    <string name="start_automatic_monitoring">启动自动监听</string>
+    <string name="stop_automatic_monitoring">停止自动监听</string>
+    <string name="auto_status_stopped">自动监听服务未启动</string>
+    <string name="auto_status_starting">正在启动自动监听前台服务……</string>
+    <string name="auto_status_stopping">正在停止自动监听服务……</string>
+    <string name="auto_status_missing_platform_permissions">无法启动：缺少 CAPTURE_AUDIO_OUTPUT 或 CONTROL_INCALL_EXPERIENCE 平台权限。</string>
+
+    <string name="uplink_injection_title">Telephony Tx 上行注入</string>
+    <string name="select_uplink_pcm">选择上行 PCM</string>
+    <string name="start_uplink_injection">开始上行注入</string>
+    <string name="stop_uplink_injection">停止上行注入并恢复原声</string>
+    <string name="injection_idle">上行注入未启动。可提前选择 PCM；通话接通后点击开始，对方将听到所选 PCM。</string>
+    <string name="injection_starting">正在静音真实麦克风并请求 Telephony Tx 路由……</string>
+    <string name="injection_stopping">正在停止上行注入并恢复麦克风状态……</string>
+    <string name="injection_requires_active_call">电话尚未接通，不能开始上行注入。</string>
+    <string name="uplink_pcm_not_selected">上行预选：尚未选择 PCM</string>
+    <string name="uplink_pcm_selected_file">上行预选：%1$s</string>
+    <string name="uplink_pcm_not_selected_error">请先从 PCM 列表选择上行注入文件。</string>
+    <string name="downlink_replacement_title">Call Redirect 下行替换</string>
+    <string name="select_downlink_pcm">选择下行 PCM</string>
+    <string name="start_downlink_replacement">开始下行注入</string>
+    <string name="stop_downlink_replacement">停止下行注入并恢复原声</string>
+    <string name="downlink_replacement_idle">下行注入未启动。可提前选择 PCM；通话接通后点击开始，本机将听到所选 PCM。</string>
+    <string name="downlink_replacement_starting">正在进入 MODE_CALL_REDIRECT 并替换真实下行……</string>
+    <string name="downlink_replacement_stopping">正在停止下行替换并恢复原始通话路由……</string>
+    <string name="downlink_replacement_requires_active_call">电话尚未接通，不能开始下行注入。</string>
+    <string name="downlink_pcm_not_selected">下行预选：尚未选择 PCM</string>
+    <string name="downlink_pcm_selected_file">下行预选：%1$s</string>
+    <string name="downlink_pcm_not_selected_error">请先从 PCM 列表选择下行注入文件。</string>
+
+    <string name="uplink_pcm_config_title">选择上行注入 PCM</string>
+    <string name="downlink_pcm_config_title">选择下行注入 PCM</string>
+    <string name="no_pcm_selected">尚未选择 PCM。</string>
+    <string name="selected_pcm_file">当前选择：%1$s</string>
+    <string name="pcm_config_idle">这里显示 call_pcm 目录中的全部 PCM。点击文件完成预选，然后返回主页开始注入。</string>
+    <string name="refresh_pcm_list">刷新 PCM 列表</string>
+    <string name="no_pcm_files">call_pcm 目录里还没有 PCM 文件。</string>
+    <string name="invalid_pcm_selection">该文件不是可用的 48 kHz 单声道 PCM16 文件。</string>
+    <string name="uplink_pcm_selected">已预选为上行注入 PCM；返回主页后点击“开始上行注入”。</string>
+    <string name="downlink_pcm_selected">已预选为下行注入 PCM；返回主页后点击“开始下行注入”。</string>
+    <string name="delete_pcm">删除</string>
+    <string name="delete_pcm_title">删除 PCM 文件？</string>
+    <string name="delete_pcm_confirmation">将永久删除“%1$s”。此操作无法撤销。</string>
+    <string name="delete_pcm_succeeded">已删除：%1$s</string>
+    <string name="delete_pcm_failed">删除失败：%1$s</string>
+    <string name="delete_pcm_blocked">通话、采集、注入或试听期间不能删除 PCM。</string>
+    <string name="preview_pcm">试听</string>
+    <string name="stop_pcm_preview">停止试听</string>
+    <string name="previewing_pcm">正在试听：%1$s</string>
+    <string name="preview_finished">PCM 试听完成。</string>
+    <string name="preview_failed">PCM 试听失败：%1$s</string>
+    <string name="preview_blocked_by_call">通话期间不能普通试听；可以直接执行注入。</string>
+
+    <string name="playback_title">最近 PCM 回放</string>
+    <string name="play_latest_downlink_pcm">播放最近下行</string>
+    <string name="play_latest_uplink_pcm">播放最近上行</string>
+    <string name="stop_playback">停止播放</string>
+    <string name="status_playback_idle">尚未播放。自动监听空闲时也可以直接播放。</string>
+    <string name="status_no_direction_pcm_to_play">没有可播放的%1$s PCM，请先完成一次通话采集。</string>
+    <string name="status_playback_blocked_by_call">当前正在拨号、通话或采集，不能回放 PCM。</string>
+    <string name="status_playback_buffer_failed">AudioTrack.getMinBufferSize() 失败：%1$d</string>
+    <string name="status_playback_failed">创建或启动 AudioTrack 失败：%1$s</string>
+    <string name="status_playback_not_initialized">AudioTrack 未初始化。</string>
+    <string name="status_previous_playback_not_released">上一条播放流还没有释放。</string>
+    <string name="status_playback_not_started">AudioTrack 没有进入 PLAYING 状态。</string>
+    <string name="status_playing">正在播放%1$s：%2$s\n文件时长：%3$.1f 秒</string>
+    <string name="status_stopping_playback">%1$s，正在停止 PCM 回放……</string>
+    <string name="status_playback_completed">PCM 播放完成，共播放 %1$d 字节。</string>
+    <string name="status_playback_stopped">PCM 播放已停止。</string>
+
+    <string name="output_path_empty">最近上下行文件：尚未创建</string>
+    <string name="output_paths">最近下行：\n%1$s\n\n最近上行：\n%2$s</string>
+    <string name="test_instructions">采集：点击一次“启动自动监听”，接通电话约 300 ms 后会分别保存 downlink_auto_*.pcm 与 uplink_auto_*.pcm。\n\n上行注入：可在通话前从完整 PCM 列表预选文件。接通后点击“开始上行注入”，对方听到所选 PCM，真实麦克风静音；点击停止后恢复你的原声。\n\n下行注入：可提前预选文件。接通后点击“开始下行注入”，真实下行被阻断，你听到所选 PCM；点击停止后恢复对方原声。\n\nPCM 列表支持试听和删除；通话、采集、注入或试听期间禁止删除。普通回放和试听只在没有通话时可用。</string>
+</resources>
